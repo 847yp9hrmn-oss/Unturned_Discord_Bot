@@ -1,0 +1,11 @@
+#Installs what is in the requirements.txt file and runs the bot.py file
+
+FROM python:3.11-slim
+
+WORKDIR /bot
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "bot.py"]

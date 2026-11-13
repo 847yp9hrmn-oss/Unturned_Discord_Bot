@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  unturned_discord_bot:
+    build: .
+    container_name: unturned_discord_bot
+    restart: unless-stopped
+    volumes:
+      - /your/project/path/bot:/bot
+    env_file:
+      - .env
+    
